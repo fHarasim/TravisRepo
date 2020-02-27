@@ -1,5 +1,6 @@
 language: swift
 osx_image: xcode11.3.1
-xcode_workspace: TravisSampleProject.xcodeproj
-xcode_scheme: TravisSampleProject
 
+
+script:
+- xcodebuild test -project TravisSampleProject.xcodeproj -scheme TravisSampleProject -destination "platform=iOS Simulator,name=iPhone 11" -sdk iphonesimulator11.0
